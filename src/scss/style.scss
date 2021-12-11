@@ -1,0 +1,83 @@
+// please insert scss modules in here
+.button {
+  border: 1px solid green;
+  color: green;
+  width: 50px;
+  height: 50px;
+  background: transparent;
+  &:hover {
+    background-color: green;
+    color: white;
+  }
+}
+// battery level css
+.box {
+  border: solid 1px;
+  width: 300px;
+  height: 50px;
+  position: relative;
+
+  .level {
+    height: 100%;
+    position: absolute;
+    &.level-90 {
+      background: green;
+      width: 90%;
+    }
+    &.level-50 {
+      background: yellow;
+      width: 50%;
+    }
+    &.level-30 {
+      background: red;
+      width: 30%;
+    }
+  }
+}
+
+.switch {
+  border: 1px solid #333;
+  width: 100px;
+  height: 50px;
+  background: #333;
+  border-radius: 26px;
+  position: relative;
+  .button,
+  p {
+    position: absolute;
+  }
+  &.active {
+    background-color: #eee;
+    .button {
+      background: #333;
+      border-radius: 16px;
+      top: 8px;
+      left: 8px;
+    }
+    p {
+      color: #333;
+      right: 5px;
+      top: 2px;
+      //   left will be reset
+      left: initial;
+    }
+  }
+
+  .button {
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    border-radius: 16px;
+    top: 8px;
+    right: 8px;
+  }
+  p {
+    color: #fff;
+    left: 8px;
+    top: 2px;
+  }
+}
+ul {
+  display: flex;
+  list-style: none;
+}

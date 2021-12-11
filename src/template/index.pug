@@ -1,0 +1,40 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    title Fe-gulp
+    link(rel="stylesheet", href="./css/style.css")
+      
+  body
+    button.button 1
+    button.button 2
+    - var battery = 50 
+    //- switch case battery level
+    div 
+      div.box
+        case battery
+          when 90
+            .level.level-90
+          when 50
+            .level.level-50 
+          when 30
+            .level.level-30
+    
+    -var active = true
+    if active === true 
+      .switch.active
+        div.button
+        p ON
+    else 
+      .switch
+        .button 
+        p OFF
+    -let route = [{name: "home", active:false,},{name: "about", active:true},{name: "contact", active:false}]
+    nav 
+      ul
+        -for(let i = 0; i < route.length; i++)
+          //- if active is true, add classname to li tag
+          li
+            a(class={active: route[i].active}) #{route[i].name}
